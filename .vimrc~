@@ -1,0 +1,46 @@
+" vundle configuration
+set rtp+=/root/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fcevado/molokai_dark'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+
+call vundle#end()
+" format
+set nocompatible
+set autoindent
+set backup
+set nu
+set smartindent
+set showmatch
+set textwidth=80
+set title
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+"syntax
+syntax on
+"support here for 256 colors in terminal
+
+" files
+filetype on
+filetype indent on
+filetype plugin on
+" always show file name
+set modeline
+set ls=2
+"colorscheme
+colorscheme molokai
+" syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag() }
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
